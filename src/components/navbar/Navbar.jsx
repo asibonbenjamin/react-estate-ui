@@ -31,7 +31,12 @@ function Navbar(){
                     <img src="menu.png" alt=""/>
                 </div>
                 <div className="menu">
-
+                    <a href="/">Home</a>
+                    <a href="/">About</a>
+                    <a href="/">Contact</a>
+                    <a href="/">Agents</a>
+                    <a href="/">Sign In</a>
+                    <a href="/">Sign Up</a>
                 </div>
 
             </div>

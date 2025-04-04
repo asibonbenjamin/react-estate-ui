@@ -81,9 +81,26 @@ nav{
         .menuIcon {
             display: none;
 
+            img{
+                width: 36px;
+                height: 36px;
+                cursor: pointer;
+            }
+
             @include sm{
             display: inline;
             }
+        }
+
+        .menu{
+            position: absolute;
+            top: 0;
+            right: -50%;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            width: 50%;
+
         }
     }
 
