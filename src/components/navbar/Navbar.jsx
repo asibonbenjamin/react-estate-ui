@@ -1,7 +1,13 @@
 // importing the navbar items
+import { useState } from "react";
 import "./Navbar.scss";
 
 function Navbar(){
+
+    // constant for the menu icon in mobile view mode
+    const [open, setOpen] = useState(false)
+
+
     return(
         <nav>
             {/* right hand items */}
@@ -28,10 +34,11 @@ function Navbar(){
                 <a href="" className="register" >Sign Up</a>
 
                 <div className="menuIcon">
-                    <img src="menu.png" alt=""/>
+                    <img src="menu.png" alt="" 
+                    onClick={() => setOpen((prev) => !prev)}/>
                 </div>
-                <div className="menu">
-                    <a href="/">Home</a>
+                <div className={open ? "menu active" : "menu"}>
+                    <a href="/">Home</a> 
                     <a href="/">About</a>
                     <a href="/">Contact</a>
                     <a href="/">Agents</a>
