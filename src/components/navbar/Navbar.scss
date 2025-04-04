@@ -1,0 +1,90 @@
+// importing the responsive css for sm
+@import "../../responsive.scss";
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+
+    a{
+        transition: all 0.4s ease-in-out;
+
+        @include sm{
+            display: none;
+        }
+
+        &:hover{
+            scale: 1.05;
+        }
+    }
+
+    //styling for the right side of the nav bar 
+    .left{
+        flex: 3;
+        background-color: rgb(254, 152, 115);
+        gap: 50px;
+        display: flex;
+        align-items: center;
+
+        .navbarLinks{
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img{
+                width: 28px;
+            }
+
+            span{
+                @include md{
+                    display: none;
+                }
+
+                @include sm{
+                    display: initial;
+                }
+            }
+        }
+    }
+    
+
+    //styling for the right side of the navbar
+    .right {
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 50px;
+        background-color: #fcf5f3;
+        height: 100%;
+
+
+        a{
+            padding: 12px 24px;
+        }
+        
+        // styling for the signup button
+        .register{
+            background-color: rgb(237, 156, 35);
+    
+        }
+
+        .menuIcon {
+            display: none;
+
+            @include sm{
+            display: inline;
+            }
+        }
+    }
+
+}
